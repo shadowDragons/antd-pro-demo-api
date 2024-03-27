@@ -56,6 +56,8 @@ export class AuthService {
         const user = await this.userService.findOneByCredential(credential, async (query) =>
             query.addSelect('user.password'),
         );
+        const adminConf = getUserConfig<UserConfig['super']>('super');
+        console.log(adminConf);
         if (user && decrypt(password, user.password)) {
             return user;
         }

@@ -19,11 +19,11 @@ export const database: ConfigureFactory<DbConfigOptions, DbConfig> = {
         connections: [
             {
                 type: 'mysql',
-                host: '127.0.0.1',
+                host: configure.env('DB_HOST', '10.0.3.119'),
                 port: 3306,
-                username: configure.env('DB_USERNAME', 'root'),
-                password: configure.env('DB_PASSWORD', '123456'),
-                database: configure.env('DB_NAME', 'nestplus'),
+                username: configure.env('DB_USERNAME', 'admin'),
+                password: configure.env('DB_PASSWORD', 'admin#4399'),
+                database: configure.env('DB_NAME', 'test2'),
                 // entities: [],
                 // 自动加载模块中注册的entity
                 // autoLoadEntities: true,
