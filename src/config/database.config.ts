@@ -19,10 +19,10 @@ export const database: ConfigureFactory<DbConfigOptions, DbConfig> = {
         connections: [
             {
                 type: 'mysql',
-                host: configure.env('DB_HOST', '10.0.3.119'),
+                host: configure.env('DB_HOST', '127.0.0.1'),
                 port: 3306,
                 username: configure.env('DB_USERNAME', 'admin'),
-                password: configure.env('DB_PASSWORD', 'admin#4399'),
+                password: configure.env('DB_PASSWORD', 'admin'),
                 database: configure.env('DB_NAME', 'test2'),
                 // entities: [],
                 // 自动加载模块中注册的entity
